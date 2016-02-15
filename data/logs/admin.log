@@ -64,3 +64,48 @@
 2016/02/15 12:27:46 [/eccube-2.13.5/html/admin/home.php] access : user=admin auth=0 sid=65qihi7tl897h4vhdclueknkg3 from ::1
 2016/02/15 12:28:29 [/eccube-2.13.5/html/admin/ownersstore/index.php] access : user=admin auth=0 sid=65qihi7tl897h4vhdclueknkg3 from ::1
 2016/02/15 13:29:09 [/eccube-2.13.5/html/admin/system/parameter.php] access : user=admin auth=0 sid=65qihi7tl897h4vhdclueknkg3 from ::1
+2016/02/15 22:43:44 [/doantotnghiep/html/admin/index.php] access error. from ::1
+2016/02/15 22:43:44 [/doantotnghiep/html/admin/index.php] login: user=admin(2) auth=0 lastlogin= sid= from ::1
+2016/02/15 22:43:45 [/doantotnghiep/html/admin/home.php] access : user=admin auth=0 sid=vb3kd7omib62eqmsprr79cmh37 from ::1
+2016/02/15 22:48:55 [/doantotnghiep/html/admin/customer/edit.php] access : user=admin auth=0 sid=vb3kd7omib62eqmsprr79cmh37 from ::1
+2016/02/15 22:49:53 [/doantotnghiep/html/admin/customer/edit.php] access : user=admin auth=0 sid=vb3kd7omib62eqmsprr79cmh37 from ::1
+2016/02/15 22:49:59 [/doantotnghiep/html/admin/customer/edit.php] access : user=admin auth=0 sid=vb3kd7omib62eqmsprr79cmh37 from ::1
+2016/02/15 22:49:59 [/doantotnghiep/html/admin/customer/edit.php] access : user=admin auth=0 sid=vb3kd7omib62eqmsprr79cmh37 from ::1
+2016/02/15 22:50:02 [/doantotnghiep/html/admin/customer/edit.php] access : user=admin auth=0 sid=vb3kd7omib62eqmsprr79cmh37 from ::1
+2016/02/15 22:50:38 [/doantotnghiep/html/admin/ownersstore/index.php] access : user=admin auth=0 sid=81uor4v3ur3lk4m5b0l5g56j95 from ::1
+2016/02/15 22:57:11 [/doantotnghiep/html/admin/ownersstore/index.php] access : user=admin auth=0 sid=81uor4v3ur3lk4m5b0l5g56j95 from ::1
+2016/02/15 22:57:11 [/doantotnghiep/html/admin/ownersstore/index.php] plg_ExportCatalogue.tar -> C:/xampp/htdocs/doantotnghiep/html/upload/temp_plugin/plg_ExportCatalogue.tar from ::1
+2016/02/15 22:57:12 [/doantotnghiep/html/admin/ownersstore/index.php] 解凍: C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install/plg_ExportCatalogue.tar -> C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install from ::1
+2016/02/15 22:57:12 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//plg_ExportCatalogue/class/helper を削除します. from ::1
+2016/02/15 22:57:12 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//plg_ExportCatalogue/class/pages を削除します. from ::1
+2016/02/15 22:57:12 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//plg_ExportCatalogue/class/page_extends を削除します. from ::1
+2016/02/15 22:57:12 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//plg_ExportCatalogue/class を削除します. from ::1
+2016/02/15 22:57:12 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//plg_ExportCatalogue/html を削除します. from ::1
+2016/02/15 22:57:12 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//plg_ExportCatalogue/resources/img を削除します. from ::1
+2016/02/15 22:57:12 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//plg_ExportCatalogue/resources/js を削除します. from ::1
+2016/02/15 22:57:12 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//plg_ExportCatalogue/resources を削除します. from ::1
+2016/02/15 22:57:12 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//plg_ExportCatalogue/templates を削除します. from ::1
+2016/02/15 22:57:12 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//plg_ExportCatalogue を削除します. from ::1
+2016/02/15 22:57:12 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install/ を削除します. from ::1
+2016/02/15 22:59:07 [/doantotnghiep/html/admin/ownersstore/index.php] access : user=admin auth=0 sid=81uor4v3ur3lk4m5b0l5g56j95 from ::1
+2016/02/15 22:59:07 [/doantotnghiep/html/admin/ownersstore/index.php] plg_ExportCatalogue.tar -> C:/xampp/htdocs/doantotnghiep/html/upload/temp_plugin/plg_ExportCatalogue.tar from ::1
+2016/02/15 22:59:07 [/doantotnghiep/html/admin/ownersstore/index.php] 解凍: C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install/plg_ExportCatalogue.tar -> C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install from ::1
+2016/02/15 22:59:08 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//class/helper を削除します. from ::1
+2016/02/15 22:59:08 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//class/pages を削除します. from ::1
+2016/02/15 22:59:08 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//class/page_extends を削除します. from ::1
+2016/02/15 22:59:08 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//class を削除します. from ::1
+2016/02/15 22:59:08 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//html を削除します. from ::1
+2016/02/15 22:59:08 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//resources/img を削除します. from ::1
+2016/02/15 22:59:08 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//resources/js を削除します. from ::1
+2016/02/15 22:59:08 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//resources を削除します. from ::1
+2016/02/15 22:59:08 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install//templates を削除します. from ::1
+2016/02/15 22:59:08 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/downloads/tmp/plugin_install/ を削除します. from ::1
+2016/02/15 22:59:08 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/Smarty/templates_c/default/ を削除します. from ::1
+2016/02/15 22:59:08 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/Smarty/templates_c/admin/ を削除します. from ::1
+2016/02/15 22:59:08 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/Smarty/templates_c/sphone/ を削除します. from ::1
+2016/02/15 22:59:08 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/Smarty/templates_c/mobile/ を削除します. from ::1
+2016/02/15 22:59:13 [/doantotnghiep/html/admin/ownersstore/index.php] access : user=admin auth=0 sid=81uor4v3ur3lk4m5b0l5g56j95 from ::1
+2016/02/15 22:59:13 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/Smarty/templates_c/default/ を削除します. from ::1
+2016/02/15 22:59:13 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/Smarty/templates_c/admin/ を削除します. from ::1
+2016/02/15 22:59:13 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/Smarty/templates_c/sphone/ を削除します. from ::1
+2016/02/15 22:59:13 [/doantotnghiep/html/admin/ownersstore/index.php] C:/xampp/htdocs/doantotnghiep/html/../data/Smarty/templates_c/mobile/ を削除します. from ::1

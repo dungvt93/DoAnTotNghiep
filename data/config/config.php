@@ -1,8 +1,8 @@
 <?php
 define('ECCUBE_INSTALL', 'ON');
-define('HTTP_URL', 'http://localhost/eccube-2.13.5/html/');
-define('HTTPS_URL', 'http://localhost/eccube-2.13.5/html/');
-define('ROOT_URLPATH', '/eccube-2.13.5/html/');
+define('HTTP_URL', 'http://localhost/doantotnghiep/html/');
+define('HTTPS_URL', 'http://localhost/doantotnghiep/html/');
+define('ROOT_URLPATH', '/doantotnghiep/html/');
 define('DOMAIN_NAME', '');
 define('DB_TYPE', 'mysql');
 define('DB_USER', 'root');
@@ -13,7 +13,7 @@ define('DB_PORT', '');
 define('ADMIN_DIR', 'admin/');
 define('ADMIN_FORCE_SSL', FALSE);
 define('ADMIN_ALLOW_HOSTS', 'a:0:{}');
-define('AUTH_MAGIC', 'waikiorioslaframiavahiarucoviahuclehaiui');
+define('AUTH_MAGIC', 'thavouclaphiomiuekouheuuthouuolousloutri');
 define('PASSWORD_HASH_ALGOS', 'sha256');
 define('MAIL_BACKEND', 'mail');
 define('SMTP_HOST', '');

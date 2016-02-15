@@ -18,6 +18,7 @@ class plg_ExportCatalogue_LC_Page_Products_PdfExport_Show extends LC_Page_Ex
     public function init()
     {
         $this->srcIframe = HTTP_URL."products/export_catalogue.php?";
+        $this->skip_load_page_layout = true;
         parent::init();
     }
 

@@ -26,7 +26,7 @@ class plg_ExportCatalogue_LC_Page_Products_PdfExport extends LC_Page_Products_Li
     public function process()
     {
         $this->createPdf();
-        $this->sendResponse();
+//        $this->sendResponse();
     }
 
     /**
@@ -41,7 +41,6 @@ class plg_ExportCatalogue_LC_Page_Products_PdfExport extends LC_Page_Products_Li
             $objFpdf = new plg_ExportCatalogue_Helper_FPDI();
             $headerTitles = array('', '商品', '商品コード', '規格', '販売価格');
             $data = array();
-            // echo "<pre>";var_dump($listProduct);exit();
             foreach ($listProduct as $product) {
                 $numberOfStandard = count($product);
                 $temp = array();
