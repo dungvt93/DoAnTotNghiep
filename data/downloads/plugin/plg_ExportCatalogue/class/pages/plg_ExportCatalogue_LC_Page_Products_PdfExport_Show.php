@@ -39,18 +39,4 @@ class plg_ExportCatalogue_LC_Page_Products_PdfExport_Show extends LC_Page_Ex
         $this->sendResponse();
     }
 
-    /**
-     * avoid require authentication when using plugin
-     * return void
-     */
-    public function checkSiteOpen()
-    {
-        if (!defined('SITE_CLOSE_TYPE') || SITE_CLOSE_TYPE == '0' || php_sapi_name() == 'cli') {
-            return;
-        } else if (SITE_CLOSE_TYPE >= 3 && SITE_CLOSE_TYPE < 8) {
-            return;
-        } else {
-            parent::checkSiteOpen();
-        }
-    }
 }
