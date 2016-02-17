@@ -419,3 +419,14 @@ ul.button_like li a {
 .side_column #recommend_area .block_body .productContents {
     clear: both;
 }
+
+/* using for Quick Order block */
+.quickOrder {
+    background-color: white;
+    padding: 14px 0px 12px 32px;
+    border: 1px solid #CCCCCC;
+
+}
+#quickOrder:hover{
+    opacity: 0.6 ;
+}

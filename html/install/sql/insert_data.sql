@@ -22,6 +22,9 @@ INSERT INTO dtb_bloc (device_type_id, bloc_id, bloc_name, tpl_path, filename, cr
 INSERT INTO dtb_bloc (device_type_id, bloc_id, bloc_name, tpl_path, filename, create_date, update_date, php_path, deletable_flg) VALUES (2, 7, '【フッター】ログイン', 'login_footer.tpl', 'login_footer', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'frontparts/bloc/login_footer.php', 0);
 INSERT INTO dtb_bloc (device_type_id, bloc_id, bloc_name, tpl_path, filename, create_date, update_date, php_path, deletable_flg) VALUES (2, 8, '【フッター】ナビ', 'navi_footer.tpl', 'navi_footer', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'frontparts/bloc/navi_footer.php', 0);
 
+INSERT INTO dtb_bloc (device_type_id, bloc_id, bloc_name, tpl_path, filename, create_date, update_date, php_path, deletable_flg) VALUES (10, 10, 'クイックオーダー', 'quickorder.tpl', 'quickorder', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'frontparts/bloc/quickorder.php', 0);
+INSERT INTO dtb_bloc (device_type_id, bloc_id, bloc_name, tpl_path, filename, create_date, update_date, php_path, deletable_flg) VALUES (2, 9, 'クイックオーダー', 'quickorder.tpl', 'quickorder', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'frontparts/bloc/quickorder.php', 0);
+
 INSERT INTO dtb_blocposition (device_type_id, page_id, target_id, bloc_id, bloc_row, anywhere) VALUES (10, 1, 1, 1, 2, 0);
 INSERT INTO dtb_blocposition (device_type_id, page_id, target_id, bloc_id, bloc_row, anywhere) VALUES (10, 1, 1, 2, 3, 0);
 INSERT INTO dtb_blocposition (device_type_id, page_id, target_id, bloc_id, bloc_row, anywhere) VALUES (10, 1, 1, 3, 1, 0);
