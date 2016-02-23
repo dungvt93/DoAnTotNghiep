@@ -412,3 +412,86 @@ div#complete_area .shop_information .name {
     font-weight: bold;
     font-size: 140%;
 }
+
+/* Quickorder Layout
+--------------------*/
+img.productImage {
+    vertical-align: text-top;
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin:0 5px 0 0;
+}
+#QuickOrder label {
+    display: block;
+    vertical-align: top;
+}
+
+.errorArea{
+    color: red;
+}
+div.quickOrderError{
+    color: red;
+    text-align: right;
+    padding-bottom: 10px;
+}
+td.productCodeInput{
+    vertical-align: top;
+    text-align: center;
+    width: 180px;
+}
+td.numberInput{
+    vertical-align: top;
+    text-align: center;
+    width: 180px;
+}
+td.productCodeInput input{
+    /*margin: 0 25px;*/
+}
+
+td.numberInput input{
+    width: 70px;
+    /*margin: 0 25px;*/
+}
+#QuickOrder tr td:last-child{
+    width: 100px;
+}
+div.quickOrderButton {
+    max-width: inherit;
+}
+a.addToCartBtn {
+    float: right;
+}
+
+a.addMoreBtn {
+    float: left;
+}
+a.addToCartBtn:hover,a.addMoreBtn:hover{
+    opacity: 0.8;
+}
+#QuickOrder tr.quickOrderTemplate {
+    display: none;
+}
+#QuickOrder th{
+    font-weight: bold;
+}
+#QuickOrder th.quantityAmount{width: 20px;}
+#QuickOrder .productInfo a{
+    text-decoration: underline;
+}
+#QuickOrder .productInfo a:hover{
+    text-decoration: none;
+}
+.fullWidth {
+    width:  100% !important;
+}
+
+#QuickOrder input[disabled]{
+    background: #f0f0f0;
+}
+#QuickOrder input.productCode{
+    width: 90%;
+}
+#QuickOrder input.productQuantity{
+    width: 80%;
+}

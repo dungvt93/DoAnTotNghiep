@@ -76,7 +76,8 @@
 
         <!--{* iPhone用アイコン画像 *}-->
         <link rel="apple-touch-icon" href="<!--{$TPL_URLPATH}-->img/common/apple-touch-icon.png" />
-
+        <!--{* Quick Order *}-->
+        <script type="text/javascript" src="<!--{$smarty.const.ROOT_URLPATH}-->js/eccube.quickorder.js"></script>
         <script type="text/javascript">//<![CDATA[
             <!--{$tpl_javascript}-->
             $(function(){

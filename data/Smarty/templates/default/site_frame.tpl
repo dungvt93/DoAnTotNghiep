@@ -67,6 +67,9 @@
     <!--{/if}-->
 <!--{/if}-->
 
+<!--{* Quick Order *}-->
+<script type="text/javascript" src="<!--{$smarty.const.ROOT_URLPATH}-->js/eccube.quickorder.js"></script>
+
 <script type="text/javascript">//<![CDATA[
     <!--{$tpl_javascript}-->
     $(function(){

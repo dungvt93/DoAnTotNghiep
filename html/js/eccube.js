@@ -538,6 +538,18 @@
         }
     };
 
+    /**
+     * check device is mobile
+     * @returns {boolean}
+     */
+    eccube.isSmartPhone = function(){
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            return true;
+        } else{
+            return false;
+        }
+    }
+
     // グローバルに使用できるようにする
     window.eccube = eccube;
 

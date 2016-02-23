@@ -292,7 +292,6 @@ __EOS__;
                 }
 
                 // 価格
-                // TODO: ここでprice01,price02を税込みにしてよいのか？ _inctax を付けるべき？要検証
                 $arrClassCats2['price01']
                     = strlen($arrProductsClass['price01'])
                     ? number_format(SC_Helper_TaxRule_Ex::sfCalcIncTax($arrProductsClass['price01'], $productId, $arrProductsClass['product_class_id']))
@@ -737,5 +736,182 @@ __EOS__;
             return true;
         }
         return false;
+    }
+
+    /**
+     * 商品コードを指定し、商品詳細を取得する
+     * @param $product_code
+     * @return array|null
+     */
+    public function getProductDetailByCode($product_code) {
+        if(!$product_code) return null;
+        //商品詳細を取得する
+        $objCustomer = new SC_Customer_Ex();
+        if ($objCustomer->isLoginSuccess(true)) {
+            // ログイン状態
+            return  $this->getProductDetailByCodeLoggedIn($product_code,$objCustomer);
+        } else {
+            //未ログイン状態
+            return $this->getProductDetailByCodeNotLoggedIn($product_code);
+        }
+    }
+
+    /**
+     * 未ログイン状態で商品詳細を取得する
+     * @param $product_code
+     * @return array
+     */
+    private function getProductDetailByCodeNotLoggedIn($product_code){
+        //未ログイン状態
+        $gettingDetailQuery = $this->buildQueryProductDetailByCode();
+        $objQuery =& SC_Query_Ex::getSingletonInstance();
+        $data = $objQuery->getAll($gettingDetailQuery,array($product_code));
+        if(!is_null($data)) {
+            foreach ($data as $key => &$row) {
+                // PRICE_VIEW_TYPE： 公開ではない
+                if (PRICE_VIEW_TYPE !== 0)
+                {
+                    // 価格をnullに設定
+                    $row['price02'] = null;
+                    $row['customer_price'] = null;
+                } else{
+                    //price02の税込変換値
+                    $row['price02'] = isset($row['price02']) && !is_null($row['price02']) ?
+                        number_format(SC_Helper_TaxRule_Ex::sfCalcIncTax($row['price02'], $row['product_id'])) :
+                        null;
+                    $row['customer_price'] = null;
+                }
+                //check NOSTOCK_HIDDEN = true
+                if(NOSTOCK_HIDDEN) {
+                    //Only display name of product if any product code of product exist in stock
+                    if (!$this->checkProductIsExistInStock($row)) {
+                        unset($data[$key]);
+                    }
+                }
+            }
+        }
+        return $data;
+    }
+
+    /**
+     * ログイン状態で商品詳細を取得する
+     * @param $product_code
+     * @param SC_Customer_Ex $objCustomer
+     * @return array
+     */
+    private function getProductDetailByCodeLoggedIn($product_code,SC_Customer_Ex $objCustomer){
+        // ログイン状態
+        $gettingDetailQuery = $this->buildQueryProductDetailByCode();
+        $objQuery =& SC_Query_Ex::getSingletonInstance();
+        $data = $objQuery->getAll($gettingDetailQuery,array($product_code));
+        if(!is_null($data)) {
+            $customer_id = $objCustomer->getValue('customer_id');
+            $company_id = $objCustomer->getValue('company_id');
+            $company_rank = $objCustomer->getValue('company_rank');
+            $customer_status = $objCustomer->getValue('status');
+            foreach ($data as $key => &$row) {
+                // PRICE_VIEW_TYPE：正式会員のみ、Customer_status：正式会員ではない場合、価格をnullに設定
+                if (PRICE_VIEW_TYPE === 2 && intval($customer_status) !== 2) {
+                    $row['price02'] = null;
+                    $row['customer_price'] = null;
+                } else{
+                    //正会員の価格を取得する
+                    $objCustomerPrice = new SC_Helper_CustomerPrice();
+                    $customer_price = $objCustomerPrice->getProductPrice($row['product_class_id']
+                        , $customer_id, $company_id, $company_rank, $row['price02']);
+                    //正会員の価格を計算
+                    if (!is_null($customer_price)) {
+                        $row['customer_price'] = strlen($customer_price)
+                            ? number_format(SC_Helper_TaxRule_Ex::sfCalcIncTax($customer_price, $row['product_id'], $row['product_class_id']))
+                            : null;
+                    } else {
+                        $row['customer_price'] = null;
+                    }
+                    //price02の税込変換値
+                    $row['price02'] = isset($row['price02']) && !is_null($row['price02']) ?
+                        number_format(SC_Helper_TaxRule_Ex::sfCalcIncTax($row['price02'], $row['product_id'])) :
+                        null;
+                }
+                //check NOSTOCK_HIDDEN = true
+                if(NOSTOCK_HIDDEN) {
+                    //Only display name of product if any product code of product exist in stock
+                    if (!$this->checkProductIsExistInStock($row)) {
+                        unset($data[$key]);
+                    }
+                }
+            }
+        }
+        return $data;
+    }
+
+    /**
+     * Check any product code of product exist in stock
+     * @param $productDetail
+     * @return bool
+     */
+    private function checkProductIsExistInStock($productDetail){
+        if(!$productDetail) return false;
+        //check if product code does not exist in stock
+        if(0 === intval($productDetail['stock'])){
+            $objQuery =& SC_Query_Ex::getSingletonInstance();
+            // get stock_max and stock_unlimited_max of all product code in product
+            $product = $this->getListByProductIds($objQuery,array($productDetail['product_id']));
+            //check if product existed, (stock_max === 0 or stock_max is null)
+            // and (stock_unlimited_max === 0 or stock_unlimited_max is null)
+            if($product &&
+                (!$product[$productDetail['product_id']]['stock_max'] ||
+                    intval($product[$productDetail['product_id']]['stock_max']) === 0) &&
+                (!$product[$productDetail['product_id']]['stock_unlimited_max'] ||
+                    intval($product[$productDetail['product_id']]['stock_unlimited_max']) === 0)){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * 商品詳細の取得のSQL
+     * @param $product_code
+     * @return string
+     */
+    private function buildQueryProductDetailByCode(){
+        // where句：商品コード
+        $whereProductClass = " WHERE TRIM(product_code) = ? AND del_flg = 0 ";
+
+        // where句：商品
+        $whereProduct = ' WHERE del_flg = 0 AND status = 1 ';
+
+        // where句：商品コードカテゴリ
+        $whereClassCategory = ' WHERE del_flg = 0 ';
+
+        // 商品詳細のSQL
+        $gettingDetailQuery = <<< __EOS__
+            SELECT pc.*
+                ,product.name
+                ,product.main_list_image
+                ,class1.name as name1
+                ,class2.name as name2
+            FROM
+            (
+                SELECT price02
+                    ,stock_unlimited
+                    ,stock
+                    ,sale_limit
+                    ,classcategory_id1
+                    ,classcategory_id2
+                    ,product_id
+                    ,product_class_id
+                    ,product_code
+                FROM dtb_products_class
+                $whereProductClass
+            ) pc
+                INNER JOIN (SELECT * FROM dtb_products $whereProduct) product
+                    ON product.product_id = pc.product_id
+                LEFT JOIN (SELECT * FROM dtb_classcategory $whereClassCategory) class1
+                    ON pc.classcategory_id1 = class1.classcategory_id
+                LEFT JOIN (SELECT * FROM dtb_classcategory $whereClassCategory) class2
+                    ON pc.classcategory_id2 = class2.classcategory_id
+__EOS__;
+        return $gettingDetailQuery;
     }
 }
