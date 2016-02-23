@@ -1,4 +1,0 @@
-2016/02/23 23:39:40 [/doantotnghiep/html/quickorder/api.php] Fatal error(E_ERROR): Call to undefined method SC_Product_Ex::getProductDetailByCode() on [C:\xampp\htdocs\doantotnghiep\data\class\pages\quickorder\LC_Page_QuickOrder_Api.php(62)] from ::1
-customer_id = 
-2016/02/24 00:21:32 [/doantotnghiep/html/index.php] Fatal error(E_PARSE): syntax error, unexpected 'if' (T_IF) on [C:\xampp\htdocs\doantotnghiep\data\class\SC_Product.php(298)] from ::1
-customer_id = 
