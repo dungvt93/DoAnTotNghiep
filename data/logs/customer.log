@@ -4,3 +4,7 @@
 2016/01/11 23:10:27 [/eccube-2.13.5/html/frontparts/login_check.php] logout : user=1	ip=::1 from ::1
 2016/01/11 23:11:24 [/eccube-2.13.5/html/shopping/index.php] access : user=1	ip=::1 from ::1
 2016/02/15 22:50:23 [/doantotnghiep/html/frontparts/login_check.php] access : user=1	ip=::1 from ::1
+2016/02/17 22:25:44 [/doantotnghiep/html/frontparts/login_check.php] access : user=1	ip=::1 from ::1
+2016/02/17 22:25:51 [/doantotnghiep/html/frontparts/login_check.php] logout : user=1	ip=::1 from ::1
+2016/02/17 23:27:06 [/doantotnghiep/html/frontparts/login_check.php] access : user=1	ip=::1 from ::1
+2016/02/20 13:55:18 [/doantotnghiep/html/frontparts/login_check.php] access : user=1	ip=::1 from ::1

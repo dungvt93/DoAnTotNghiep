@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.27, created on 2016-02-15 22:59:51
+<?php /* Smarty version 2.6.27, created on 2016-02-20 14:04:20
          compiled from site_frame.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'printXMLDeclaration', 'site_frame.tpl', 1, false),array('modifier', 'script_escape', 'site_frame.tpl', 26, false),array('modifier', 'h', 'site_frame.tpl', 27, false),array('modifier', 'strlen', 'site_frame.tpl', 27, false),array('modifier', 'count', 'site_frame.tpl', 79, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'printXMLDeclaration', 'site_frame.tpl', 1, false),array('modifier', 'script_escape', 'site_frame.tpl', 26, false),array('modifier', 'h', 'site_frame.tpl', 27, false),array('modifier', 'strlen', 'site_frame.tpl', 27, false),array('modifier', 'count', 'site_frame.tpl', 82, false),)), $this); ?>
 <?php echo GC_Utils_Ex::printXMLDeclaration(array(), $this);?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -72,6 +72,9 @@ js/jquery.colorbox/jquery.colorbox-min.js"></script>
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <?php endif; ?>
 <?php endif; ?>
+
+<script type="text/javascript" src="<?php echo ((is_array($_tmp=@ROOT_URLPATH)) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)); ?>
+js/eccube.quickorder.js"></script>
 
 <script type="text/javascript">//<![CDATA[
     <?php echo ((is_array($_tmp=$this->_tpl_vars['tpl_javascript'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)); ?>
